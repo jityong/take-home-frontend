@@ -1,0 +1,102 @@
+.nav-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.backdrop {
+    /*z-index: 2;*/
+    background: rgba(0, 0, 0, 0.70);
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    background: #42607B;
+    width: 32.5rem;
+    height: 100%;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    float: right;
+    gap: 0.625rem;
+    bottom: -3.4375rem;
+}
+
+.providerEntries {
+    display: flex;
+    padding: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 0.625rem;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.providerEntries::-webkit-scrollbar {
+    display: none
+}
+
+.providerEntry, .providerEntrySelected {
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    align-self: inherit;
+    border-radius: 0.5rem;
+    padding: 0.625rem;
+    background: none;
+    gap: 0.625rem;
+}
+
+.providerEntrySelected {
+    background: #1A2632;
+}
+
+.icon {
+    pointer-events: none;
+}
+
+.expandButton, .descButton{
+    display: flex;
+    border: 0;
+    border-radius: 0;
+    align-self: stretch;
+    font-weight: 400;
+}
+
+.expandButton {
+    justify-content: space-between;
+    align-items: flex-start;
+    background: inherit;
+    padding: 0;
+}
+
+.expandButton:focus {
+    outline: none;
+}
+
+.expandButton:hover {
+    /* Apparently not recommended for accessibility, but following figma design.*/
+    border-color: transparent;
+}
+
+.logo {
+    width: 2rem;
+    height: 2rem;
+}
+
+.descButton {
+    padding: 0.25rem 0;
+    align-items: center;
+    background: inherit;
+    font-size: 1.25rem;
+    gap: 0.5rem;
+    text-align: left;
+}
